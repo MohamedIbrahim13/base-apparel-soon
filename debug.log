@@ -1,0 +1,4 @@
+[1010/164326.375:ERROR:settings.cc(430)] Settings version is not 5
+[1010/165326.611:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\Milan\AppData\Local\Microsoft\Edge\User Data\Crashpad\reports\4b6f4823-bf38-4021-9ca7-b8666d1cf731.dmp: The system cannot find the file specified. (0x2)
+[1010/165326.635:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\Milan\AppData\Local\Microsoft\Edge\User Data\Crashpad\reports\8cc2c6b8-df3e-4e09-b674-faef71512fbe.dmp: The system cannot find the file specified. (0x2)
+[1010/165326.635:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

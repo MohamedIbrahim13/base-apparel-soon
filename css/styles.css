@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, white 0%, #fff5f5 60%);
+}
+
+.container {
+  display: grid;
+  background: url("../images/bg-pattern-desktop.svg") no-repeat bottom left;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: -webkit-max-content;
+  grid-template-rows: max-content;
+  grid-template-areas: "logo hero" "soon hero";
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+@media screen and (max-width: 576px) {
+  .container {
+    grid-template-columns: repeat(1, 100vw);
+    grid-template-areas: "logo" "hero" "soon";
+    background: url("../images/bg-pattern-desktop.svg") no-repeat;
+  }
+}
+.container .logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  /*grid-column: 1/2;
+  grid-row: 1/2;*/
+  grid-area: logo;
+  padding: 65px 0px 0px 165px;
+}
+@media screen and (max-width: 576px) {
+  .container .logo {
+    padding: 31px 32px 32px;
+  }
+}
+.container .logo .logo-container {
+  width: 158px;
+  height: 33px;
+  overflow: hidden;
+}
+@media screen and (max-width: 576px) {
+  .container .logo .logo-container {
+    width: 100px;
+    height: 21px;
+  }
+}
+.container .logo .logo-container img {
+  width: 100%;
+}
+.container .hero {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: hero;
+  background: url("../images/hero-desktop.jpg") no-repeat center;
+  width: 100%;
+  height: 100%;
+  background-position-x: center;
+  /*grid-column: 2/3;
+  grid-row: 1/3;
+  */
+}
+@media screen and (max-width: 576px) {
+  .container .hero {
+    background: url("../images/hero-mobile.jpg") cover no-repeat;
+    width: 100%;
+    height: 250px;
+  }
+}
+.container .soon {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: soon;
+  padding: 0 32px 0 165px;
+  margin-top: 100px;
+  align-self: start;
+  /*grid-column: 1/2;
+  grid-row: 2/3;*/
+}
+@media screen and (max-width: 576px) {
+  .container .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .container .hero {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+  .container .soon {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container .soon {
+    padding: 0 32px;
+    margin-top: 64px;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 17px;
+  text-align: left;
+  font-size: 64px;
+}
+@media screen and (max-width: 576px) {
+  h1 {
+    text-align: center;
+    line-height: 42px;
+    letter-spacing: 11px;
+    font-size: 40px;
+  }
+}
+
+.container h1:nth-child(1) {
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+
+.container h1:last-of-type {
+  line-height: 64px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.container h1:first-of-type,
+.container p {
+  color: #ce9797;
+}
+
+p {
+  line-height: 28px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  letter-spacing: 0.5px;
+}
+@media screen and (max-width: 576px) {
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: -16px;
+    letter-spacing: 0;
+  }
+}
+
+form {
+  margin-top: 40px;
+  margin-bottom: 151.5px;
+  max-width: 445px;
+  display: flex;
+  align-items: center;
+  border-radius: 28px;
+  justify-content: space-between;
+  box-shadow: inset 0px 0px 0px 1px #E6C6C6;
+}
+@media screen and (max-width: 576px) {
+  form {
+    margin-top: 32px;
+  }
+}
+form input {
+  padding: 14px 31px 12px;
+  width: 55%;
+  height: 28px;
+  border: none;
+  caret-color: #ce9797;
+  outline: none;
+  background-color: transparent;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+form input::placeholder {
+  color: #ce9797;
+  opacity: 0.65;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+@media screen and (max-width: 576px) {
+  form input {
+    padding: 11px 23px 9px;
+    width: 100%;
+  }
+}
+form button {
+  border: none;
+  outline: none;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 10px 20px 0 linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  transform: translate(2px, 0);
+  z-index: 1;
+  transition: all 0.3s ease;
+  padding: 0;
+  width: 100px;
+  height: 56px;
+  margin-left: 8px;
+}
+
+.error {
+  align-self: center;
+  display: none;
+}
+
+.error.show {
+  display: flex;
+}
+
+p.error-msg {
+  color: #f96262;
+  display: none;
+  padding-left: 32px;
+  line-height: 2.15;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+p.error-msg.show {
+  display: block;
+}
+
+form.error {
+  box-shadow: inset 0px 0px 0px 2px #f96262;
+}
